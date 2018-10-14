@@ -66,8 +66,8 @@ class App extends React.Component {
                     error={this.state.error}
                    />
                 </div>
+                {/*passing the props to the components*/}
               </div>
-              //passing the props to the components
             </div>
           </div>
         </div>
