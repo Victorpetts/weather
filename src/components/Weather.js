@@ -10,3 +10,6 @@ const Weather = props => (
 );
 
 export default Weather;
+
+// The component for the outputs
+// It's a stateless functional component since this component does not contains any states

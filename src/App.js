@@ -14,6 +14,7 @@ class App extends React.Component {
     description: undefined,
     error: undefined
   }
+  // the initial states
 
   getWeather = async (e) => {
     e.preventDefault();
@@ -21,9 +22,9 @@ class App extends React.Component {
     const country = e.target.elements.country.value;
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${API_KEY}`);
     const data = await api_call.json();
+    //calling the API
 
     if (city && country) {
-      // console.log(data);
 
       this.setState({
         city: data.name,
@@ -41,6 +42,8 @@ class App extends React.Component {
         error: "Please enter a location"
       });
     }
+    // get the data from the API if the user has filled in both city and country and chnage the state
+    // display error message otherwise
   }
 
   render() {
@@ -64,6 +67,7 @@ class App extends React.Component {
                    />
                 </div>
               </div>
+              //passing the props to the components
             </div>
           </div>
         </div>
