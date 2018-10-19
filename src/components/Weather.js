@@ -2,14 +2,12 @@ import React from "react";
 
 const Weather = props => (
   <div className="weather__info">
-    {props.city && props.country && props.temperature &&
-    <p className="weather__key">The temperature in {props.city}, {props.country} is {props.temperature} degrees</p>}
-    {props.description && <p className="weather__key">Its {props.description}</p>}
+    {props.city && props.temperature &&
+    <p className="weather__key">The temperature in {props.city} is {props.temperature} degrees</p>}
+    {props.description &&
+    <p className="weather__key">It's {props.description}<img src={`http://openweathermap.org/img/w/${props.icon}.png`} alt='weather icon' /></p>}
     {props.error && <p className="weather__key">{props.error}</p>}
   </div>
 );
 
 export default Weather;
-
-// The component for the outputs
-// It's a stateless functional component since this component does not contains any states
